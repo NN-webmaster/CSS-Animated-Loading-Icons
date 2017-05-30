@@ -1,0 +1,125 @@
+/* Component Styles */
+
+.as-bar {
+  width: 20px;
+  height: 20px;
+  display: flex;
+}
+
+/* Vertical pulsation bar */
+.as-vertical {
+  justify-content: space-between;
+}
+
+.as-vb-line {
+  width: 20%; height: 100%;
+  background: #FF6700;
+  transform-origin: 100% 100%;
+  animation: as-anim-vertical-jumping linear infinite normal;
+}
+
+.as-vb-line:nth-of-type(1) { animation-duration: 2s;   }
+.as-vb-line:nth-of-type(2) { animation-duration: 1.2s; }
+.as-vb-line:nth-of-type(3) { animation-duration: 1.7s; }
+
+@keyframes as-anim-vertical-jumping {
+  50%  { transform: scaleY(0) }
+}
+
+/* Horizontal pulsation from center bar */
+
+.as-pulse {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.as-pb-line {
+  width: 20%; height: 20%;
+  background: #FF6700;
+  transform-origin: center center;
+  animation: as-anim-center-stretching linear infinite alternate;
+}
+
+.as-pb-line:nth-of-type(1) { animation-duration: .6s; }
+.as-pb-line:nth-of-type(2) { animation-duration: 1s;  }
+.as-pb-line:nth-of-type(3) { animation-duration: .8s; }
+
+@keyframes as-anim-center-stretching {
+  100% { transform: scaleY(3) }
+}
+
+/* Horizontal opacity change bar */
+
+.as-opacity {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.as-ob-line {
+  width: 20%; height: 100%;
+  background: #FF6700;
+  animation: as-anim-opacity-horizontal linear infinite alternate;
+}
+
+.as-ob-line:nth-of-type(1) { animation-duration: .5s; }
+.as-ob-line:nth-of-type(2) { animation-duration: .5s; animation-delay: .2s; }
+.as-ob-line:nth-of-type(3) { animation-duration: .5s; animation-delay: .4s; }
+
+@keyframes as-anim-opacity-horizontal {
+  100% { opacity: 0; }
+}
+
+/* Vertical jumping bar */
+
+.as-jumping {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.as-jb-line {
+  width: 20%; height: 50%;
+  background: #FF6700;
+  animation: as-anim-jumping-vertical linear infinite alternate;
+}
+
+.as-jb-line:nth-of-type(1) { animation-duration: .5s; animation-delay: .2s; }
+.as-jb-line:nth-of-type(2) { animation-duration: .5s; }
+.as-jb-line:nth-of-type(3) { animation-duration: .5s; animation-delay: .4s; }
+
+@keyframes as-anim-jumping-vertical {
+  100% { transform: translateY(-200%); }
+}
+
+/* Jumping and opacity bar */
+
+.as-opacityjumping {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.as-oj-line {
+  width: 20%; height: 20%;
+  background: #FF6700;
+  animation: as-anim-opacityjumping linear infinite alternate;
+}
+
+.as-oj-line:nth-of-type(1) { animation-duration: .5s; }
+.as-oj-line:nth-of-type(2) { animation-duration: .5s; animation-delay: .2s; }
+.as-oj-line:nth-of-type(3) { animation-duration: .5s; animation-delay: .4s; }
+
+@keyframes as-anim-opacityjumping {
+  100% { 
+    opacity: 0;
+/*     transform: scaleY(3); */
+  }
+}
+
+/* Loading ring */
+
+.as-loading {
+
+}
+
+.as-lr-ring {
+
+}
